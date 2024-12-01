@@ -2,7 +2,7 @@
 FROM debian:buster
 
 # Set environment variables if needed
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Update package lists and install any necessary packages
 RUN apt-get update && \
@@ -19,6 +19,7 @@ COPY ./app /app
 RUN mkdir /data
 RUN mkdir /output_data
 RUN mkdir /temp
+RUN chmod 777 /output_data /temp
 
 # Set the working directory
 WORKDIR /app
