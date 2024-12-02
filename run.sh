@@ -1,1 +1,1 @@
-sudo docker run --name findbin_container -v $(pwd)/input_data:/input_data -v $(pwd)/output_data:/output_data -itd findbin
+docker run --name findbin_container-$(openssl rand -hex 4) --user $(id -u):$(id -g) -v $(pwd)/input_data:/input_data -v $(pwd)/output_data:/output_data findbin python3 findbin.py --input_path /input_data --output_path /output_data

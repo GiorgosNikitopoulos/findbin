@@ -1,1 +1,1 @@
-sudo docker build -t findbin .
+docker build -t findbin .
