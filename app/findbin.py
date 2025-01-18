@@ -47,7 +47,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Find executable ELFs')
     parser.add_argument("--input_path", type=str, default = "/input_data", help="Input path")
     parser.add_argument("--output_path", type=str, default = "/output_data", help="Output path")
-    parser.add_argument("--temp_dir", type=str, default="./tmp", help="Output path")
+    parser.add_argument("--temp_dir", type=str, default="/tmp", help="Output path")
 
     args = parser.parse_args()
     main(args)
